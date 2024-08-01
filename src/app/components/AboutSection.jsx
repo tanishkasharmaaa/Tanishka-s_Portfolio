@@ -9,12 +9,11 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
         <li>React</li>
+        <li>Redux</li>
       </ul>
     ),
   },
@@ -23,8 +22,8 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>Frontend Development from Prepleaf by Masai</li>
+        <li>Prepleaf by Masai (Banglore)</li>
       </ul>
     ),
   },
@@ -33,8 +32,8 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Certificate of Appreciation (from Prepleaf by Masai)</li>
+        <li>Internship completion Certificate from CodSoft</li>
       </ul>
     ),
   },
@@ -57,12 +56,17 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+            Hello! I'm a passionate Frontend Developer with expertise in
+            crafting dynamic and responsive web applications. Proficient in
+            HTML, CSS, and JavaScript, I specialize in building user-friendly
+            interfaces. My skill set includes React and Redux for state
+            management, allowing me to create seamless and interactive user
+            experiences. Additionally, I utilize Chakra UI to design visually
+            appealing and accessible components. With a keen eye for detail and
+            a commitment to clean code, I aim to deliver high-quality web
+            solutions. I thrive in collaborative environments and continuously
+            seek to enhance my skills and stay updated with the latest industry
+            trends.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
