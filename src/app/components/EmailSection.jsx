@@ -2,6 +2,10 @@
 
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import Link from 'next/link';
+import Image from 'next/image';
+import GithubIcon from '../../../public/github-icon.svg';
+import LinkedinIcon from '../../../public/linkedin-icon.svg';
 
 export const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -14,9 +18,7 @@ export const EmailSection = () => {
     setEmailSubmitted(false);
 
     emailjs
-      .sendForm('service_i7roh6o', 'template_bat503p', form.current, {
-        publicKey: 'G3NLy9bxqQ72L3z_z',
-      })
+      .sendForm('service_i7roh6o', 'template_bat503p', form.current, 'G3NLy9bxqQ72L3z_z')
       .then(
         () => {
           console.log('SUCCESS!');
@@ -43,6 +45,14 @@ export const EmailSection = () => {
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           Feel free to drop us a message, and we'll get back to you as soon as possible.
         </p>
+        <div className="flex flex-row gap-4 mb-6">
+          <Link href="https://github.com" target="_blank">
+            <Image src={GithubIcon} alt="GitHub Icon" width={30} height={30} />
+          </Link>
+          <Link href="www.linkedin.com/in/tanishka-304953274" target="_blank">
+            <Image src={LinkedinIcon} alt="LinkedIn Icon" width={30} height={30} />
+          </Link>
+        </div>
       </div>
       <div>
         {emailSubmitted ? (
@@ -59,7 +69,7 @@ export const EmailSection = () => {
                 Your Name
               </label>
               <input
-                name="from_email"
+                name="from_name"
                 type="text"
                 id="user_name"
                 required
