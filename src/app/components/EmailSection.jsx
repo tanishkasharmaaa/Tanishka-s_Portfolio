@@ -1,49 +1,33 @@
 "use client";
-import React, { useState } from "react";
-import GithubIcon from "../../../public/github-icon.svg";
-import LinkedinIcon from "../../../public/linkedin-icon.svg";
-import Link from "next/link";
-import Image from "next/image";
 
-const EmailSection = () => {
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+
+export const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [error, setError] = useState(null);
+  const form = useRef();
 
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     setError(null);
     setEmailSubmitted(false);
 
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
-
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSONdata,
-    };
-
-    try {
-      const response = await fetch(endpoint, options);
-      const resData = await response.json();
-
-      if (response.ok) {
-        console.log("Message sent.");
-        setEmailSubmitted(true);
-        e.target.reset();
-      } else {
-        setError(resData.error || "Something went wrong.");
-      }
-    } catch (err) {
-      setError(err.message || "Something went wrong.");
-    }
+    emailjs
+      .sendForm('service_i7roh6o', 'template_bat503p', form.current, {
+        publicKey: 'G3NLy9bxqQ72L3z_z',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setEmailSubmitted(true);
+          form.current.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setError(error.text || "Something went wrong.");
+        },
+      );
   };
 
   return (
@@ -54,21 +38,11 @@ const EmailSection = () => {
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
         <h5 className="text-xl font-bold text-white my-2">
-          Let&apos;s Connect
+          Contact Us
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          I&apos;m currently looking for new opportunities, my inbox is
-          always open. Whether you have a question or just want to say hi,
-          I&apos;ll try my best to get back to you!
+          Feel free to drop us a message, and we'll get back to you as soon as possible.
         </p>
-        <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com">
-            <Image src={GithubIcon} alt="Github Icon" />
-          </Link>
-          <Link href="https://linkedin.com">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
-          </Link>
-        </div>
       </div>
       <div>
         {emailSubmitted ? (
@@ -76,37 +50,37 @@ const EmailSection = () => {
             Email sent successfully!
           </p>
         ) : (
-          <form className="flex flex-col" onSubmit={handleSubmit}>
+          <form ref={form} className="flex flex-col" onSubmit={sendEmail}>
             <div className="mb-6">
               <label
-                htmlFor="email"
+                htmlFor="user_name"
                 className="text-white block mb-2 text-sm font-medium"
               >
-                Your email
+                Your Name
               </label>
               <input
-                name="email"
-                type="email"
-                id="email"
+                name="from_email"
+                type="text"
+                id="user_name"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="jacob@google.com"
+                placeholder="John Doe"
               />
             </div>
             <div className="mb-6">
               <label
-                htmlFor="subject"
+                htmlFor="user_email"
                 className="text-white block text-sm mb-2 font-medium"
               >
-                Subject
+                Your Email
               </label>
               <input
-                name="subject"
-                type="text"
-                id="subject"
+                name="user_email"
+                type="email"
+                id="user_email"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Just saying hi"
+                placeholder="john.doe@example.com"
               />
             </div>
             <div className="mb-6">
@@ -121,7 +95,7 @@ const EmailSection = () => {
                 id="message"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Let's talk about..."
+                placeholder="Your message here..."
               />
             </div>
             <button
