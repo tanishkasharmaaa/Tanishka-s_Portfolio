@@ -6,11 +6,13 @@ const variants = {
   active: { width: "calc(100% - 0.75rem)" },
 };
 
-const TabButton = ({ active, selectTab, children }) => {
+const TabButton = ({ active, selectTab, children, ...props }) => {
+  // Remove unexpected attributes
+  const { fdprocessedid, ...filteredProps } = props;
   const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
 
   return (
-    <button onClick={selectTab}>
+    <button {...filteredProps} onClick={selectTab}>
       <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>
         {children}
       </p>

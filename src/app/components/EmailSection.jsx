@@ -46,10 +46,10 @@ export const EmailSection = () => {
           Feel free to drop us a message, and we'll get back to you as soon as possible.
         </p>
         <div className="flex flex-row gap-4 mb-6">
-          <Link href="https://github.com" target="_blank">
+          <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
             <Image src={GithubIcon} alt="GitHub Icon" width={30} height={30} />
           </Link>
-          <Link href="www.linkedin.com/in/tanishka-304953274" target="_blank">
+          <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
             <Image src={LinkedinIcon} alt="LinkedIn Icon" width={30} height={30} />
           </Link>
         </div>
