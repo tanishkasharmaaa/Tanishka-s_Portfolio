@@ -1,5 +1,5 @@
 "use client";
-import React, { useTransition, useState } from "react";
+import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 
@@ -11,7 +11,7 @@ const TAB_DATA = [
       <ul className="list-disc pl-2">
         <li>HTML</li>
         <li>CSS</li>
-        <li>Javascript</li>
+        <li>JavaScript</li>
         <li>React</li>
         <li>Redux</li>
       </ul>
@@ -23,7 +23,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Frontend Development from Prepleaf by Masai</li>
-        <li>Prepleaf by Masai (Banglore)</li>
+        <li>Prepleaf by Masai (Bangalore)</li>
       </ul>
     ),
   },
@@ -33,7 +33,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Certificate of Appreciation (from Prepleaf by Masai)</li>
-        <li>Internship completion Certificate from CodSoft</li>
+        <li>Internship Completion Certificate from CodSoft</li>
       </ul>
     ),
   },
@@ -42,17 +42,22 @@ const TAB_DATA = [
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
+  const activeTab = TAB_DATA.find((t) => t.id === tab) || TAB_DATA[0];
 
   const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
-    });
+    startTransition(() => setTab(id));
   };
 
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+        <Image
+          src="/images/about-image.png"
+          width={500}
+          height={500}
+          alt="About image showcasing the developer"
+        />
+
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
@@ -68,31 +73,19 @@ const AboutSection = () => {
             seek to enhance my skills and stay updated with the latest industry
             trends.
           </p>
-          <div className="flex flex-row justify-start mt-8">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              {" "}
-              Skills{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              {" "}
-              Education{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              {" "}
-              Certifications{" "}
-            </TabButton>
+          <div className="flex flex-row justify-start mt-8 space-x-4">
+            {TAB_DATA.map(({ id, title }) => (
+              <TabButton
+                key={id}
+                selectTab={() => handleTabChange(id)}
+                active={tab === id}
+              >
+                {title}
+              </TabButton>
+            ))}
           </div>
           <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
+            {activeTab.content}
           </div>
         </div>
       </div>
