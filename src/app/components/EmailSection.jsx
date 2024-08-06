@@ -50,7 +50,7 @@ export const EmailSection = () => {
           <Link href="https://github.com/tanishkasharmaaa" target="_blank" rel="noopener noreferrer">
             <Image src={GithubIcon} alt="GitHub Icon" width={30} height={30} />
           </Link>
-          <Link href="www.linkedin.com/in/tanishka-304953274" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.linkedin.com/in/tanishka-304953274/" target="_blank" rel="noopener noreferrer">
             <Image src={LinkedinIcon} alt="LinkedIn Icon" width={30} height={30} />
           </Link>
         </div>
