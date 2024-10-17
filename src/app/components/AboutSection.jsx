@@ -13,7 +13,10 @@ const TAB_DATA = [
         <li>CSS</li>
         <li>JavaScript</li>
         <li>React</li>
-        <li>Redux</li>
+        <li>Restful API</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>MongoDB</li>
       </ul>
     ),
   },
@@ -61,17 +64,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            Hello! I'm a passionate Frontend Developer with expertise in
-            crafting dynamic and responsive web applications. Proficient in
-            HTML, CSS, and JavaScript, I specialize in building user-friendly
-            interfaces. My skill set includes React and Redux for state
-            management, allowing me to create seamless and interactive user
-            experiences. Additionally, I utilize Chakra UI to design visually
-            appealing and accessible components. With a keen eye for detail and
-            a commitment to clean code, I aim to deliver high-quality web
-            solutions. I thrive in collaborative environments and continuously
-            seek to enhance my skills and stay updated with the latest industry
-            trends.
+          I am a passionate Full Stack Developer with expertise in building dynamic and responsive web applications. Proficient in HTML, CSS, and JavaScript, I create engaging user interfaces using React and Chakra UI for seamless user experiences. On the backend, I specialize in developing robust RESTful APIs using Express.js and Node.js, with a strong focus on database management using MongoDB and Mongoose. My comprehensive skill set allows me to take projects from concept to completion, ensuring high-quality performance and functionality.
           </p>
           <div className="flex flex-row justify-start mt-8 space-x-4">
             {TAB_DATA.map(({ id, title }) => (
@@ -84,9 +77,7 @@ const AboutSection = () => {
               </TabButton>
             ))}
           </div>
-          <div className="mt-8">
-            {activeTab.content}
-          </div>
+          <div className="mt-8">{activeTab.content}</div>
         </div>
       </div>
     </section>

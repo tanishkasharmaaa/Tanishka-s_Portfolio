@@ -7,6 +7,15 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
+    title: "Myntra",
+    description: "Myntra Clone ",
+    image: "/images/projects/6.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/tanishkasharmaaa/Myntra",
+    previewUrl: "https://myntra-f8tp.vercel.app/",
+  },
+  {
+    id: 2,
     title: "Urban Company Clone",
     description: "Urban Company Replica ",
     image: "/images/projects/1.png",
@@ -15,7 +24,7 @@ const projectsData = [
     previewUrl: "https://urban-company-liart.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "KFC Clone",
     description: "KFC Replica",
     image: "/images/projects/2.png",
@@ -24,7 +33,7 @@ const projectsData = [
     previewUrl: "https://inspiring-gecko-f9852c.netlify.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Shopper Stop",
     description: "E-commerce application",
     image: "/images/projects/3.png",
@@ -33,7 +42,7 @@ const projectsData = [
     previewUrl: "https://peppy-dieffenbachia-7354ba.netlify.app",
   },
   {
-    id: 4,
+    id: 5,
     title: "Food Ordering Application",
     description: "Food ordering application",
     image: "/images/projects/4.png",
@@ -42,7 +51,7 @@ const projectsData = [
     previewUrl: "https://main--wondrous-cocada-d740f8.netlify.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Portfolio",
     description: "Personal Portfolio project",
     image: "/images/projects/5.png",
