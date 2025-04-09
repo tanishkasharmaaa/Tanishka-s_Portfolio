@@ -10,7 +10,7 @@ const projectsData = [
     title: "Nord Storm Rack",
     description: "Nord Storm Rack Clone",
     image: "/images/projects/1.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Web","Mobile"],
     gitUrl: "https://github.com/tanishkasharmaaa/Nord_Storm",
     previewUrl: "https://nord-storm.vercel.app/",
   },
