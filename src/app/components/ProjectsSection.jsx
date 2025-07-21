@@ -41,8 +41,17 @@ const projectsData = [
     gitUrl: "https://github.com/tanishkasharmaaa/Urban_Company",
     previewUrl: "https://urban-company-liart.vercel.app/",
   },
-  {
+    {
     id: 5,
+    title: "Kanban-Go",
+    description: "Task Manager",
+    image: "/images/projects/9.png",
+    tag: ["All", "Web","Mobile"],
+    gitUrl: "https://github.com/tanishkasharmaaa/Kanban-Board",
+    previewUrl: "https://kanbango.vercel.app",
+  },
+  {
+    id: 6,
     title: "KFC Clone",
     description: "KFC Replica",
     image: "/images/projects/3.png",
