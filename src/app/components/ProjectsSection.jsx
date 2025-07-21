@@ -52,11 +52,11 @@ const projectsData = [
   },
   {
     id: 7,
-    title: "Portfolio",
+    title: "Tanishka.dev",
     description: "Personal Portfolio project",
     image: "/images/projects/6.png",
     tag: ["All", "Web","Mobile"],
-    gitUrl: "",
+    gitUrl: "https://github.com/tanishkasharmaaa",
     previewUrl: "/",
   }
 ];
