@@ -7,6 +7,15 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
+    title: "AskAI",
+    description: "AskAI (generates:- text and images on a single prompt)",
+    image: "/images/projects/8.png",
+    tag: ["All", "Web","Mobile"],
+    gitUrl: "https://github.com/tanishkasharmaaa/AskAI.git",
+    previewUrl: "https://ask-ai-vgt6.vercel.app/",
+  },
+  {
+    id: 2,
     title: "Nord Storm Rack",
     description: "Nord Storm Rack Clone",
     image: "/images/projects/1.png",
@@ -15,7 +24,7 @@ const projectsData = [
     previewUrl: "https://nord-storm.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Myntra",
     description: "Myntra Clone ",
     image: "/images/projects/7.png",
@@ -24,7 +33,7 @@ const projectsData = [
     previewUrl: "https://myntra-f8tp.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Urban Company Clone",
     description: "Urban Company Replica ",
     image: "/images/projects/2.png",
@@ -33,7 +42,7 @@ const projectsData = [
     previewUrl: "https://urban-company-liart.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "KFC Clone",
     description: "KFC Replica",
     image: "/images/projects/3.png",
@@ -42,32 +51,14 @@ const projectsData = [
     previewUrl: "https://inspiring-gecko-f9852c.netlify.app/",
   },
   {
-    id: 5,
-    title: "Food Ordering Application",
-    description: "Food ordering application",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web","Mobile"],
-    gitUrl: "https://github.com/tanishkasharmaaa/Food_Ordering-App",
-    previewUrl: "https://main--wondrous-cocada-d740f8.netlify.app/",
-  },
-  {
-    id: 6,
+    id: 7,
     title: "Portfolio",
     description: "Personal Portfolio project",
     image: "/images/projects/6.png",
     tag: ["All", "Web","Mobile"],
     gitUrl: "",
     previewUrl: "/",
-  },
-  // {
-  //   id: 6,
-  //   title: "Full-stack Roadmap",
-  //   description: "Project 5 description",
-  //   image: "/images/projects/6.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
+  }
 ];
 
 const ProjectsSection = () => {

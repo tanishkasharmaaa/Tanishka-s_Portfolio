@@ -8,16 +8,24 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Restful API</li>
-        <li>Node.js</li>
-        <li>Express.js</li>
-        <li>MongoDB</li>
-      </ul>
+     <ul className="list-disc pl-2">
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>JavaScript (ES6+)</li>
+  <li>React.js</li>
+  <li>Chakra UI</li>
+  <li>RESTful APIs</li>
+  <li>Node.js</li>
+  <li>Express.js</li>
+  <li>MongoDB</li>
+  <li>Mongoose</li>
+  <li>JWT Authentication</li>
+  <li>Google OAuth 2.0</li>
+  <li>Cloudinary Integration</li>
+  <li>Google Gemini API (AI Integration)</li>
+  <li>Git & GitHub</li>
+</ul>
+
     ),
   },
   {
@@ -25,8 +33,8 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Frontend Development from Prepleaf by Masai</li>
-        <li>Prepleaf by Masai (Bangalore)</li>
+        <li>Completed Frontend Development Training at Prepleaf by Masai</li>
+        <li>Attended Prepleaf Program (Bangalore) focused on real-world web development skills</li>
       </ul>
     ),
   },
@@ -35,9 +43,29 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>Certificate of Appreciation (from Prepleaf by Masai)</li>
-        <li>Internship Completion Certificate from CodSoft</li>
-      </ul>
+   <li>
+    <a
+      href="https://drive.google.com/file/d/1s1OFBRfDhQ8ifNTcaOa4x6P0M9fPX_ST/view?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:underline"
+    >
+      Certificate of Participation (from Prepleaf by Masai)
+    </a>
+  </li>
+  
+  <li>
+    <a
+      href="https://drive.google.com/file/d/1LYr5pkuJYuVnBAwO6xkhyJP3Y0TcG7g3/view?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:underline"
+    >
+      Certificate of Appreciation (from Prepleaf by Masai)
+    </a>
+  </li>
+</ul>
+
     ),
   },
 ];
@@ -64,7 +92,15 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-          I am a passionate Full Stack Developer with expertise in building dynamic and responsive web applications. Proficient in HTML, CSS, and JavaScript, I create engaging user interfaces using React and Chakra UI for seamless user experiences. On the backend, I specialize in developing robust RESTful APIs using Express.js and Node.js, with a strong focus on database management using MongoDB and Mongoose. My comprehensive skill set allows me to take projects from concept to completion, ensuring high-quality performance and functionality.
+          I'm a passionate Full Stack Web Developer with hands-on experience in building responsive, real-world web applications using the <strong>MERN stack</strong> (MongoDB, Express.js, React, Node.js).
+
+On the frontend, I craft interactive and mobile-friendly UIs using <strong>React</strong> and <strong>Chakra UI</strong>, with solid knowledge of <strong>HTML5, CSS3, and JavaScript (ES6+)</strong>.
+
+On the backend, I build secure <strong>RESTful APIs</strong> using <strong>Node.js</strong> and <strong>Express.js</strong>, with database management via <strong>MongoDB</strong> and <strong>Mongoose</strong>.
+
+I also work on projects that integrate <strong>AI APIs</strong>. My project <strong>AskAI</strong> is powered by <strong>Google Gemini API</strong> and provides real-time intelligent responses, secured with <strong>JWT authentication</strong> and <strong>Google OAuth 2.0</strong>. I also use <strong>Cloudinary</strong> for media upload and management.
+
+I love solving real-world problems through code and continuously push myself to learn and build better.
           </p>
           <div className="flex flex-row justify-start mt-8 space-x-4">
             {TAB_DATA.map(({ id, title }) => (
