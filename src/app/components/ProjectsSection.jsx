@@ -41,8 +41,17 @@ const projectsData = [
     gitUrl: "https://github.com/tanishkasharmaaa/Urban_Company",
     previewUrl: "https://urban-company-liart.vercel.app/",
   },
-    {
+   {
     id: 5,
+    title: "Library App",
+    description: "To create and read books",
+    image: "/images/projects/10.png",
+    tag: ["All", "Web","Mobile"],
+    gitUrl: "https://github.com/tanishkasharmaaa/Library_App",
+    previewUrl: "https://library-app-ten-eta.vercel.app",
+  },
+    {
+    id: 6,
     title: "Kanban-Go",
     description: "Task Manager",
     image: "/images/projects/9.png",
@@ -51,7 +60,7 @@ const projectsData = [
     previewUrl: "https://kanbango.vercel.app",
   },
   {
-    id: 6,
+    id: 7,
     title: "KFC Clone",
     description: "KFC Replica",
     image: "/images/projects/3.png",
@@ -60,7 +69,7 @@ const projectsData = [
     previewUrl: "https://inspiring-gecko-f9852c.netlify.app/",
   },
   {
-    id: 7,
+    id: 8,
     title: "Tanishka.dev",
     description: "Personal Portfolio project",
     image: "/images/projects/6.png",
